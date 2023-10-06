@@ -1,24 +1,23 @@
+// https://leetcode.com/problems/length-of-last-word/
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, char *argv[]) {
-  char *str = argv[1];
-
+int lengthOfLastWord(char *s) {
   int i = 0;
   int word_len = 0;
 
-  while (str[i] != '\0') {
-    if (str[i + 1] != '\0' && isspace(str[i]) && !isspace(str[i + 1])) {
+  while (s[i] != '\0') {
+    if (s[i + 1] != '\0' && isspace(s[i]) && !isspace(s[i + 1])) {
       word_len = 0;
     }
 
-    if (!isspace(str[i])) {
+    if (!isspace(s[i])) {
       word_len++;
     }
 
     i++;
   }
 
-  printf("%i\n", word_len);
+  return word_len;
 }

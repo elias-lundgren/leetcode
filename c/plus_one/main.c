@@ -1,6 +1,4 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+// https://leetcode.com/problems/plus-one/
 #include <stdlib.h>
 
 int *plusOne(int *digits, int digitsSize, int *returnSize) {
@@ -24,5 +22,3 @@ int *plusOne(int *digits, int digitsSize, int *returnSize) {
 
   return newDigits;
 }
-
-int main(void) {}
